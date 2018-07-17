@@ -1,0 +1,26 @@
+div{
+    color: royalblue;
+  }
+  ul {
+       li {
+      padding: 3px 4px;
+      a { 
+        color: #4c4c4c;
+               width: 10px;
+        height: 10px;
+        display: block;
+      }
+      &.active a { 
+        color: #f17d06;
+        
+      }
+    } 
+  }
+ span {}
+  .example {
+    display: grid;
+    transition: all .5s;
+    user-select: none;
+    background: linear-gradient(to bottom, white, black);
+  
+}
