@@ -1,0 +1,64 @@
+.container {
+//max-width:120rem;
+//margin: 8rem auto;
+//bgcolor
+//min-height:50rem;
+}
+.header {
+    height:7rem;
+    background-color: #fff;
+    border-bottom: var(--color-primary-light)
+}
+
+// .item-container {
+//     display:flex;
+//     flex-direction: row;
+//     background-color: yellow;
+//     flex-wrap: wrap;
+//     justify-content: space-between;
+//     align-items: center;
+//     //height:500px;
+// max-width: 1000px
+   
+// }
+// .item {
+// background-color: aquamarine;
+// max-width:30%;
+// flex: 0,0,30%;
+// margin:3px;
+// align-self: center
+// }
+
+.item-containter {
+    background-color: #ccc;
+    padding: 10px;
+    
+    display: flex; //or inline-flex
+    flex-direction: row; // row-reverse / column / column-reverse
+    
+    // ALONG MAIN AXIS
+    justify-content: center; //space-between / space-around / space-evenly flex-end
+    
+    // ALONG CROSS-AXIS
+    //First, set i2 height to 250px
+    align-items: center; // center / stretch / flex-end / flex-start / basleine (set size to 60px)
+    
+    // Copy 5 more items
+    flex-wrap: wrap;
+    
+    //height: 100vh;
+    align-content: space-between;
+  }
+  
+  .item {
+    //flex: 1;
+    
+    background-color: rgb(112, 108, 109);
+    margin: 30px;
+    color: #fff;
+    font-size: 40px;
+    padding: 50px;
+  }
+  
+  
+  
