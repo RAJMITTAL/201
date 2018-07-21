@@ -1,29 +1,75 @@
-div {
-  color: royalblue; }
+* {
+  margin: 0;
+  padding: 0; }
 
-ul li {
-  padding: 3px 4px; }
-  ul li a {
-    color: #4c4c4c;
-    width: 10px;
-    height: 10px;
-    display: block; }
-  ul li.active a {
-    color: #f17d06; }
+:root {
+  --color-primary: #123456;
+  --color-primary-light: #345678;
+  --color-primary-dark:#987654;
+  --text-color-dark: #a3a3a3;
+  --text-color-light:#959595;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px; }
 
-.example {
-  display: grid;
-  -webkit-transition: all .5s;
-  -o-transition: all .5s;
-  transition: all .5s;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
-  background: -o-linear-gradient(top, white, black);
-  background: linear-gradient(to bottom, white, black); }
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
 
-span {
-  width: 100px; }
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 75%;
+  background-color: var(--color-primary-dark);
+  color: var(--color-primary-light); }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.4; }
+
+.logo {
+  height: 8rem; }
+
+.search {
+  height: 2rem; }
+  .search__button {
+    height: 2rem; }
+
+.header {
+  height: 7rem;
+  background-color: #fff;
+  border-bottom: var(--color-primary-light); }
+
+.item-containter {
+  background-color: #ccc;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: justify;
+      align-content: space-between; }
+
+.item {
+  background-color: #706c6d;
+  margin: 30px;
+  color: #fff;
+  font-size: 40px;
+  padding: 50px; }
 

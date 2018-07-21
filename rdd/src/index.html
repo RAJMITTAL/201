@@ -5,10 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
 </head>
 <body>
-    i am being copied
+    <div class="container">
+<header class="header">
+<img src=<%=require("./img/rddlogo.svg")%> alt="Raju Da Dhaba logo" class="logo">
+</header>
+<div class="search">
+        <form action="#" class="search">
+                <input type="text" class="search__input" placeholder="Search food">
+                <button class="search__button">
+                    <svg class="search__icon">
+                        <use xlink:href="<%=require('./img/rddlogo.svg')%>"></use>
+                    </svg>
+                </button>
+            </form>
+
+</div>
+<div class="item-container">
+    <div class="item">
+        <img src="" alt="" class="food">
+        <div class="itemContent">
+            <h2>Kadai Paneer</h2>
+            <p class="description">description</span>
+
+        </div>
+        <div class="product-quantity">
+            <form id="myform" method="POST" action="#">
+                <div class="product-quantity">
+                    <div class="cart-plus-minus">
+                        <input class="cart-plus-minus-box" type="text" name="qtybutton" value="02">
+                        <div class="add__to__cart__btn">
+                            <a class="food__btn" href="cart.html">Add To Cart</a>
+                        </div>
+                    <div class="dec qtybutton">-</div><div class="inc qtybutton">+</div></div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="item">2</div>
+
+</div>
+    </div>
 </body>
 </html>
+

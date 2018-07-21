@@ -38,7 +38,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
         }},
         { loader: "sass-loader", options: {} }
       ]
-    }
+    },
+    {
+           test: /\.(png|svg|jpg|gif)$/,
+                 use: [
+                  {loader: 'file-loader', options:{name:'[name].[ext]'}}
+                 ]
+               }
 ]},
         plugins: [ 
         new MiniCssExtractPlugin({

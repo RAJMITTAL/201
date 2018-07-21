@@ -86,17 +86,6 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/components/cart/cart.scss":
-/*!***************************************!*\
-  !*** ./src/components/cart/cart.scss ***!
-  \***************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/components/cart/cart.scss?");
-
-/***/ }),
-
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -105,7 +94,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n__webpack_require__(/*! ./style.scss */ \"./src/style.scss\");\n\n__webpack_require__(/*! ./components/cart/cart.scss */ \"./src/components/cart/cart.scss\");\n\nconsole.log(\"i am doing great in the stuff, how\");\nvar a = void 0;\nvar b = \"raj\";\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("\n\n__webpack_require__(/*! ./style.scss */ \"./src/style.scss\");\n\n// import \"./img/sprite.svg\"\n// import \"./img/rddlogo.svg\"\nconsole.log(\"i am doing great in the stuff, how\");\nvar a = void 0;\nvar b = \"raj\";\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
