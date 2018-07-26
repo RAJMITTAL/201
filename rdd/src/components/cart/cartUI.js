@@ -3,21 +3,22 @@
 
 export class CartUI {
 
-    constructor(cartData, parentElemement)
+    constructor(cartData, parentElement)
     {
         this.cartData = cartData;
+        this.parentElement = parentElement;
     }
 
 
 renderCart() {
- this.cartData.forEach(element => {
-this.renderItem(element,parentElemement);  
+ this.cartData.Items.forEach(element => {
+this.renderItem(element,this.parentElement);  
  });
 
-this.renderTotal(this.cartData, parentElemement);
+this.renderTotal(this.cartData, this.parentElement);
 }
 
-renderItem(item,parentElemement){
+renderItem(item,parentElement){
     console.log(item);
     const markup = `
     <div class="cart-item" data-itemid=${item.id}>
@@ -39,18 +40,18 @@ renderItem(item,parentElemement){
         </div>
     </div>
     `;
-    parentElemement.insertAdjacentHTML('beforeend', markup);
+    parentElement.insertAdjacentHTML('beforeend', markup);
   
 }
     
-renderTotal(cartData,parentElemement) {
+renderTotal(cartData,parentElement) {
     const markup = `
     <div class="summary"> 
-    <div "cart-amount">${cartData.cartTotal} </div>
-    <div "cart-tax">${cartData.cartTotal} </div>
-    <div "cart-total">${cartData.grandTotal}</div>
-    </div>`
-
+    <div class="cart-amount">${cartData.cartTotal} </div>
+    <div class="cart-tax">${cartData.cartTax} </div>
+    <div class="cart-total">${cartData.grandTotal}</div>
+    </div>`;
+    parentElement.insertAdjacentHTML('beforeend', markup);
 }
 
    

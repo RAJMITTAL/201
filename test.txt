@@ -1,0 +1,32 @@
+Modules::::
+
+Navigation 
+Search
+Filter (veg & Vegan fitler)
+Carousel
+Food Listing/with selection features
+
+Cart/order List/edit cart
+Tax module
+
+Payment screen(readonly with payment show)
+
+
+
+Framework:
+
+Json structure.
+Project structure
+Build system with wepack and bebel
+Sass, minification and merging
+responsive structure with GRID definition
+home page structure.
+
+NFR:
+SEO
+Sementic Tags
+schema.org (optional)
+Accessibility (Level A):: title of pages, langauge of pages, keyboard access, labels, picture element.
+                            skip to element if time permits
+Release notes
+
