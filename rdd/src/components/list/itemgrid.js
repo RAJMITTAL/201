@@ -3,10 +3,10 @@ import { elements } from "./elements";
 export const renderItem = (item,parentElemement) => {
     console.log(item);
     const markup = `
-    <div class="item" data-itemid=${item.id}>
-        <img src="${item.photoLarge}" alt="" class="food">
+    <div class="item" data-itemid=${item.id}  itemscope="" itemtype="http://schema.org/MenuItem">
+      <img itemprop="image" src="${item.photoLarge}" alt="" class="Menu image">
         <div class="itemContent">
-            <h2>${item.title}</h2>
+            <h2 itemprop="name">${item.title}</h2>
             <p class="description">${item.description}</p>
            <span>${item.currency}</span> <p class="price">${item.price}</p>
         </div>
