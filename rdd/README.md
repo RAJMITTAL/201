@@ -55,10 +55,9 @@ npm run build
 
 ## Testing Transactions
 
-Credit card: 4111 1111 1111 111
-Date: 04/22
-CVV : not requried
-
+* Credit card: 4111 1111 1111 111
+* Date: 04/22
+* CVV : not requried
 
 ## Built With
 

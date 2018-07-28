@@ -3,9 +3,15 @@ import MenuData from "./components/list/dataModel";
 import * as menuView from "./components/list/itemgrid";
 import { Cart, CartItem } from "./components/cart/cart";
 import { CacheManager } from "./components/cacheManager/cacheManager";
+import {HeaderUI} from "./components/header/HeaderUI";
 const pageElements = {
-  items: document.querySelector(".item-container")
+  items: document.querySelector(".item-container"),
+  mainContainer: document.querySelector(".container")
 };
+
+var header = new HeaderUI();
+header.render(pageElements.mainContainer);
+
 
 const menuDetails = new MenuData();
 var a = menuDetails.getMenuItems();

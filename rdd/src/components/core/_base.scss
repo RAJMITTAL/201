@@ -6,8 +6,9 @@ padding:0;
 --color-primary: #123456;
 --color-primary-light: #345678;
 --color-primary-dark:#987654;
---text-color-dark: #a3a3a3;
+--text-color-dark: #444444;
 --text-color-light:#959595;
+
 --breakpoint-xs: 0;
 --breakpoint-sm: 576px;
 --breakpoint-md: 768px;
@@ -25,8 +26,8 @@ padding:0;
 html {
     box-sizing: border-box;
     font-size: 75%;
-    background-color:var(--color-primary-dark);
-    color: var(--color-primary-light)
+    //background-color:var(--color-primary-dark);
+    color: var(--text-color-dark)
 }
 
 
@@ -35,4 +36,23 @@ body {
     font-weight: 400;
     line-height: 1.4
 
+}
+
+.food__btn {
+	background: #d50c0d none repeat scroll 0 0;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    font-size: 18px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 22px;
+    text-transform: capitalize;
+    position: relative;
+    transform: translateZ(0px);
+	transition-duration: 0.5s;
+    &:hover
+    {
+        cursor: hand;
+    }
 }

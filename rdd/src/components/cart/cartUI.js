@@ -22,12 +22,10 @@ renderItem(item,parentElement){
     console.log(item);
     const markup = `
     <div class="cart-item" data-itemid=${item.id}>
-        <img src="${item.photosmall}" alt="" class="food">
-        <div class="itemContent">
-            <h2>${item.title}</h2>
-            <span>{item.currency}</span> <p class="price">${item.totalCost}</p>
-        </div>
-        <div class="product-quantity">
+    <div><img src="${item.photosmall}" alt="" class="food"></div>
+        <div class=""> ${item.title}</div>
+         <div>${item.currency}${item.totalCost}</div>
+         <div class="product-quantity">
             <form id="myform" method="POST" action="#">
                 <div class="product-quantity">
                     <div class="cart-plus-minus">
@@ -36,8 +34,9 @@ renderItem(item,parentElement){
                     <button id=${item.id} class="inc-qty qty-btn">+</button></div>
                 </div>
             </form>
+         </div>
             <div>X</div>
-        </div>
+        
     </div>
     `;
     parentElement.insertAdjacentHTML('beforeend', markup);
@@ -46,10 +45,13 @@ renderItem(item,parentElement){
     
 renderTotal(cartData,parentElement) {
     const markup = `
-    <div class="summary"> 
-    <div class="cart-amount">${cartData.cartTotal} </div>
-    <div class="cart-tax">${cartData.cartTax} </div>
-    <div class="cart-total">${cartData.grandTotal}</div>
+   <div class="summary">
+    <div class="summary__wrap"> 
+    <div class="summary__amount summary__item"><span>Cart Total</span><span>${cartData.cartTotal} </span></div>
+    <div class="summary__tax summary__item"><span>Tax</span><span>${cartData.cartTax}</span></div>
+    <div class="summary__total summary__item"><span>Grand Total</span><span>${cartData.grandTotal}</span></div>
+    <div ><span></span><span><form id="myform" method="get" action="/payment.html"><button class="food__btn">Proceed to Payment</button></form></span></div>
+    </div>
     </div>`;
     parentElement.insertAdjacentHTML('beforeend', markup);
 }
