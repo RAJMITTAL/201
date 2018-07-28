@@ -30,7 +30,7 @@ Project is not packaged with all the NPM dependenices, after downloading please 
 
 ```
 npm install
-
+```
 
 
 ## Build & deployment
