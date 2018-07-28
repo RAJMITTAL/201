@@ -54,5 +54,42 @@ renderTotal(cartData,parentElement) {
     parentElement.insertAdjacentHTML('beforeend', markup);
 }
 
-   
+renderSummary(){
+
+    
+    
+    const itemSummary = this.cartData.Items.reduce((itemMarkup,item) => 
+    {
+        itemMarkup+= this.renderSummaryItem(item);
+        return itemMarkup;
+    },"");
+console.log(itemSummary);
+    const markup = `
+    <div class="order-details">
+    <form action="#">
+        <ul>
+            <li><p class="strong">product</p><p class="strong">total</p></li>
+             ${itemSummary}
+            <li><p class="strong">cart subtotal</p><p class="strong">${this.cartData.cartTotal}</p></li>
+            <li><p class="strong">Tax</p><p>
+                <p${this.cartData.cartTax}</p><br>
+            </p></li>
+            <li><p class="strong">order total</p><p class="grandTotal">${this.cartData.grandTotal}</p></li>
+            <li><button>place order</button></li>
+        </ul>
+    </form>
+</div>
+    `;
+    this.parentElement.insertAdjacentHTML('beforeend', markup);
+  
+}
+renderSummaryItem(item){
+    
+    const markup =`
+     <li><p>${item.count}x ${item.title} </p><p>${item.totalCost}</p></li>
+     `
+    return markup;
+}
+
+
 }

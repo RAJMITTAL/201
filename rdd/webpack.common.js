@@ -18,6 +18,7 @@ module.exports = {
   //     path: path.resolve(__dirname, 'dist'),
   entry: {
     home: "./src/index.js",
+    payment: "./src/payment.js",
     cart: "./src/cartPage.js",
     vendor: "babel-polyfill"
     // pageThree: './src/pageThree/index.js'
@@ -77,6 +78,12 @@ module.exports = {
       hash: true,
       template: "./src/cart.html",
       filename: "cart.html"
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      hash: true,
+      template: "./src/payment.html",
+      filename: "payment.html"
     }),
     new CopyWebpackPlugin(
       [{ from: "./src/img", to: "img" },

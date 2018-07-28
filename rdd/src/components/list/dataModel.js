@@ -8,7 +8,6 @@ export default class MenuItem {
         try {
             const res = await axios(servicePath);
                     console.log(res);
-            this.raj ='aa';
            
             this.menuItems = res.data.map(element => { 
                 console.log('in');
