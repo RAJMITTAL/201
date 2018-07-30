@@ -1,10 +1,10 @@
-import "./style.scss";
-import { Cart, CartItem } from "./components/cart/cart";
-import { CacheManager } from "./components/cacheManager/cacheManager";
-import  {CartUI} from "./components/cart/cartUI";
-import  {UserDetails} from "./components/user/userDetails";
-import  {Payment} from "./components/payment/payment";
-import {HeaderUI} from "./components/header/HeaderUI";
+import "../css/style.scss";
+import { Cart, CartItem } from "../components/cart/cart";
+import { CacheManager } from "../components/cacheManager/cacheManager";
+import  {CartUI} from "../components/cart/cartUI";
+import  {UserDetails} from "../components/user/userDetails";
+import  {Payment} from "../components/payment/payment";
+import {HeaderUI} from "../components/header/HeaderUI";
 
 
 const pageElements = {

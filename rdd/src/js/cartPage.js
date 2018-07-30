@@ -1,11 +1,8 @@
-import "./style.scss";
-//import MenuData from "./components/list/dataModel";
-//import * as menuView from "./components/list/itemgrid";
-import { Cart, CartItem } from "./components/cart/cart";
-import { CacheManager } from "./components/cacheManager/cacheManager";
-import  {CartUI} from "./components/cart/cartUI";
-import {HeaderUI} from "./components/header/HeaderUI";
-import {Helper} from "./components/helper/helper";
+import { Cart, CartItem } from "../components/cart/cart";
+import { CacheManager } from "../components/cacheManager/cacheManager";
+import  {CartUI} from "../components/cart/cartUI";
+import {HeaderUI} from "../components/header/HeaderUI";
+import {Helper} from "../components/helper/helper";
 import { debug } from "util";
 
 const pageElements = {

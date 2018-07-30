@@ -17,9 +17,9 @@ module.exports = {
   //     filename: 'bundled.js',
   //     path: path.resolve(__dirname, 'dist'),
   entry: {
-    home: "./src/index.js",
-    payment: "./src/payment.js",
-    cart: "./src/cartPage.js",
+    home: "./src/js/index.js",
+    payment: "./src/js/payment.js",
+    cart: "./src/js/cartPage.js",
     vendor:["babel-polyfill"]
     // pageThree: './src/pageThree/index.js'
   },

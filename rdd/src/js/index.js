@@ -1,10 +1,10 @@
-import "./style.scss";
-import MenuData from "./components/list/dataModel";
-import * as menuView from "./components/list/itemgrid";
-import { Cart, CartItem } from "./components/cart/cart";
-import { CacheManager } from "./components/cacheManager/cacheManager";
-import {HeaderUI} from "./components/header/HeaderUI";
-import {Helper} from "./components/helper/helper";
+import "../css/style.scss";
+import MenuData from "../components/list/dataModel";
+import * as menuView from "../components/list/itemgrid";
+import { Cart, CartItem } from "../components/cart/cart";
+import { CacheManager } from "../components/cacheManager/cacheManager";
+import {HeaderUI} from "../components/header/HeaderUI";
+import {Helper} from "../components/helper/helper";
 
 const pageElements = {
   items: document.querySelector(".item-container"),
