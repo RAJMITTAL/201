@@ -7,7 +7,6 @@ Food ordering app for delivery in Delhi
 * Index 
 * Checkout
 * Payment
-* thanks
 
 ## Getting Started
 
