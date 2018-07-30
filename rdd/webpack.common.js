@@ -20,7 +20,7 @@ module.exports = {
     home: "./src/index.js",
     payment: "./src/payment.js",
     cart: "./src/cartPage.js",
-    vendor: "babel-polyfill"
+    vendor:["babel-polyfill"]
     // pageThree: './src/pageThree/index.js'
   },
   output: {

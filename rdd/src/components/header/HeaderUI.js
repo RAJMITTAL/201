@@ -1,7 +1,7 @@
 export class HeaderUI {
 
 
-render(parentElement) {
+render(parentElement,count=0) {
 const markup = `
 <header class="header">
 <a href="/" >
@@ -19,9 +19,9 @@ const markup = `
 
                                 
             <div class="shopping__cart">
-                <a class="shopping__cart__cart navigation__link" href="#">Cart</a>
+                <a class="shopping__cart__cart navigation__link" href="/cart.html">Cart</a>
                 <div class="shop__qun">
-                    <span>03</span>
+                    <span class="cart-count">${count}</span>
                 </div>
             </div>
 

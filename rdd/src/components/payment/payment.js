@@ -1,7 +1,7 @@
 import axios from 'axios';
 export class Payment {
 
-Integrate()
+integrate(customeEvent)
 {
    let client_token = "";
 
@@ -18,17 +18,33 @@ Integrate()
    braintree.dropin.create({
        authorization: client_token,
        container: '#bt-dropin',
-       paypal: {
-           flow: 'vault'
-       }
+       card: {
+        overrides: {
+          styles: {
+            input: {
+              color: '#959595',
+              'font-size': '18px'
+            },
+
+          }
+        }
+      },
+       paypal: false
+       
    }, function (createErr, instance) {
        form.addEventListener('submit', function (event) {
            event.preventDefault();
 
            instance.requestPaymentMethod(function (err, payload) {
                if (err) {
-                   console.log('Error', err);
+                  if(!document.querySelector('#cod').checked)
                    return;
+                   else
+                   {
+                    document.querySelector(".message").style.display="block";
+                    document.querySelector(".food__btn").style.display="none";
+                    customeEvent();
+                   }
                }
 
                // Add the nonce to the form and submit
@@ -38,7 +54,11 @@ Integrate()
                 payment_method_nounce: document.querySelector('#nonce').value
               })
               .then(function (response) {
-                window.location="/orderSummary";
+                console.log(response);
+                document.querySelector(".message").style.display="block";
+                document.querySelector(".message").innerHTML =`Payment Sucessfull.  Order Received`;
+                    document.querySelector(".food__btn").style.display="none";
+                    customeEvent();
               })
               .catch(function (error) {
                 console.log(error);

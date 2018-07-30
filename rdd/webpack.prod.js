@@ -14,6 +14,9 @@
     new UglifyJSPlugin({
       uglifyOptions: {
         parallel: true,
+        compress: {
+          drop_console: true,
+        },
         output: {
           comments: false,
           beautify: false

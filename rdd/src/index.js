@@ -4,53 +4,52 @@ import * as menuView from "./components/list/itemgrid";
 import { Cart, CartItem } from "./components/cart/cart";
 import { CacheManager } from "./components/cacheManager/cacheManager";
 import {HeaderUI} from "./components/header/HeaderUI";
+import {Helper} from "./components/helper/helper";
+
 const pageElements = {
   items: document.querySelector(".item-container"),
   mainContainer: document.querySelector(".container")
 };
 
+const cacheManager = new CacheManager();
 var header = new HeaderUI();
 header.render(pageElements.mainContainer);
 
 
 const menuDetails = new MenuData();
-var a = menuDetails.getMenuItems();
-var b = Promise.all([a]).then(values => {
+var prom = menuDetails.getMenuItems();
+var allProm = Promise.all([prom]).then(values => {
   console.values;
   menuDetails.menuItems.forEach(element => {
     menuView.renderItem(element, pageElements.items);
+    
   });
+  menuView.renderCheckout(pageElements.items);
+  cacheManager.setItem("menuItems",menuDetails.menuItems);
 });
 
-var myCart = new Cart();
-const cacheManager = new CacheManager();
-document
-  .querySelector(".item-container")
-  .addEventListener("click", function(event) {
-    // alert(event.target.id+'pp');
-    // alert('raju')
-    if (event.target.matches(".qty-btn")) {
-      const btn = event.target.parentElement.querySelector(
-        ".cart-plus-minus-box"
-      );
-      let quantity = parseInt(btn.value);
-      btn.value = quantity += 1;
-      console.log(btn);
-      var item = new CartItem(event.target.id, btn.value);
-      //console.log(item);
-      myCart.update(item);
-     // console.log(myCart);
-      cacheManager.setItem("cart", myCart);
-      console.log("writing cache");
-      console.log(cacheManager.getItem("cart"));
-      myCart.reconcile(menuDetails.menuItems);
-    }
-    event.preventDefault();
-    event.stopPropagation();
-  });
+const myCart = getCart(); 
 
-// var carItem = new CartItem(1,1)
+cacheManager.setItem("cart",myCart);
 
-// myCart.update(carItem);
 
-console.log("mycart");
+pageElements.mainContainer.addEventListener("click", Helper.productUpdate);
+//pageElements.mainContainer.addEventListener("click", updateMinicart);
+
+function updateMinicart()
+{
+ document.querySelector(".cart-count").innerHTML= getCart().totalItemCount;
+}
+function getCart()
+{
+  const cart = new Cart();
+const cartData= cacheManager.getItem("cart");
+if(cartData!=null || cartData!=undefined)
+{
+  cart.restoreState(cartData)
+}
+console.log(cart  );
+return cart;
+
+}
+
