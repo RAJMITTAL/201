@@ -61,7 +61,6 @@ npm run build
 * NODE
 * NPM
 * Babel
-* Node
 * Babel-polyfill
 * Axios
 * autoprefixer
